@@ -1,7 +1,7 @@
 import { NearestFilter, PerspectiveCamera, Scene, Texture, Vector2, WebGLRenderer } from "three";
 import { RootAnimation } from "./animation.js";
 import { PlayerObject } from "./model.js";
-import { isSlimSkin, loadCapeToCanvas, loadSkinToCanvas } from "skinview-utils";
+import { inferModelType, loadCapeToCanvas, loadSkinToCanvas } from "./utils";
 
 export interface SkinViewerOptions {
 	domElement: Node;
@@ -80,7 +80,7 @@ export class SkinViewer {
 			loadSkinToCanvas(this.skinCanvas, this.skinImg);
 
 			if (this.detectModel) {
-				this.playerObject.skin.slim = isSlimSkin(this.skinCanvas);
+				this.playerObject.skin.slim = inferModelType(this.skinCanvas) == 'slim';
 			}
 
 			this.skinTexture.needsUpdate = true;
