@@ -306,7 +306,7 @@ export class SkinObject extends Group {
 		);
 		const rightLegMesh = new Mesh(rightLegBox, layer1Material);
 
-		const rightLeg2Box = new BoxGeometry(4.5, 13.5, 4.5, 0, 0, 0);
+		const rightLeg2Box = new BoxGeometry(4.5, 12.5, 4.5, 0, 0, 0);
 		setVertices(rightLeg2Box,
 			toSkinVertices(4, 32, 8, 36),
 			toSkinVertices(8, 32, 12, 36),
@@ -341,7 +341,7 @@ export class SkinObject extends Group {
 		);
 		const leftLegMesh = new Mesh(leftLegBox, layer1Material);
 
-		const leftLeg2Box = new BoxGeometry(4.5, 13.5, 4.5, 0, 0, 0);
+		const leftLeg2Box = new BoxGeometry(4.5, 12.5, 4.5, 0, 0, 0);
 		setVertices(leftLeg2Box,
 			toSkinVertices(4, 48, 8, 52),
 			toSkinVertices(8, 48, 12, 52),
